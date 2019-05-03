@@ -3,7 +3,7 @@ body {
   background: #f6f6f6;
   margin: 0;
   padding: 0;
-  
+
   background: linear-gradient(rgba(200,200,200,.3), rgba(200,200,200,.3)), url('img/food5.jpg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -96,6 +96,7 @@ body {
   float: right;
   flex-direction: column;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .ingredients p {
@@ -130,27 +131,16 @@ body {
 .row {
   margin-left: 2.5%;
   width: 75%;
-  height: auto;
+  height: 75%;
+  position: absolute;
   display: inline-block;
   text-align: center;
   margin-top: 170px;
   background-color: white;
   border-radius: 10px;
+  overflow-y: scroll;
 }
 
-.card {
-  text-align: center;
-  background-color: rgb(206, 190, 190);
-  width: 21%;
-  margin: 12px;
-  display: inline-block;
-}
-
-.card img {
-  width: 66%;
-  height: 50%;
-  padding-top: 25px
-}
 
 #searchbar {
   width: 100%;
@@ -163,6 +153,7 @@ body {
   text-align: center;
   border-radius: 10px;
   padding: 30px;
+  overflow-y: scroll;
 }
 
 #descriptionContainer {
@@ -228,7 +219,7 @@ body {
   border-right: none;
   border-left: none;
   border-bottom: 1px solid lightgrey;
-  
+
   width: 150px;
   height: 20px;
   padding: 5px 30px;
@@ -245,7 +236,7 @@ body {
   border-right: none;
   border-left: none;
   border-bottom: 1px solid lightgrey;
-  
+
   width: 150px;
   height: 20px;
   padding: 5px 30px;
@@ -319,4 +310,29 @@ body {
   border-radius: 15px;
   padding: 10px;
   border: 1px solid lightgrey;
+}
+
+.card {
+  text-align: center;
+  /* background-color: rgb(206, 190, 190); */
+  width: 21%;
+  margin: 12px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 66%;
+  height: 50%;
+  padding-top: 25px
+}
+
+.card :hover{
+  transition-duration: 1s;
+  border-radius: 20px;
+  box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.75);
+}
+
+.cardButton * {
+  pointer-events: none
 }
