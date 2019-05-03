@@ -60,6 +60,7 @@ class SelectedCardDisplay extends Component {
         <p>Protein: {cardProps.protein} </p>
       </div>
       <button className="pageBtn" onClick={()=>{this.props.postFavoriteFoods(favoriteObj, this.props.userId)}}>ADD TO FAVORITES</button>
+      <button className="pageBtn" onClick={(e)=>{this.props.addToShoppingCart(cardProps.ingredientLines)}}>ADD INGREDIENTS TO CART </button>
       </div>
     );
   }
