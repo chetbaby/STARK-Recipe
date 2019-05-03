@@ -19,8 +19,8 @@ class ShoppingList extends Component {
     })
     return (
       <div>
-        <Collapsible trigger={<button className="rightMenuBtn">SHOPPING CART</button>} transitionTime={200}>
-          <div>
+        <Collapsible trigger={<button className="rightMenuBtn">SHOPPING LIST</button>} transitionTime={200}>
+          <div className="favBar">
             {cartItemsArr}
           </div>
         </Collapsible>
