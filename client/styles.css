@@ -47,6 +47,7 @@ body {
 
 .welcomeHeader {
   margin-left: 20px;
+  font-family: 'Oswald', sans-serif;
 }
 
 #searchbox {
@@ -66,7 +67,7 @@ body {
   padding-left: 10px;
   outline: none;
   border: none;
-  margin-left: 60px;
+  margin-left: 40px;
 }
 
 #searchBtn {
@@ -90,7 +91,7 @@ body {
   float: right;
   width: 19%;
   height: 760px;
-  border: 1px dotted grey;
+  /* border: 1px dotted grey; */
   display: flex;
   float: right;
   flex-direction: column;
@@ -114,15 +115,16 @@ body {
 .rightMenuBtn {
   background-color: white;
   cursor: pointer;
-  padding: 18px;
   outline: none;
-  font-size: 15px;
+  font-size: 22px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   display: table-cell;
   vertical-align: middle;
-  margin-top: 135px;
+  margin-top: 140px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
 }
 
 .row {
@@ -205,6 +207,7 @@ body {
   color: #252e38;
   font-size: 34px;
   margin-top: 40px;
+  font-weight: bold;
 }
 
 .textbox {
@@ -297,5 +300,23 @@ body {
   font-size: 12px;
   color: white;
   border: none;
+}
 
+.removeBtn {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  outline: none;
+  background-color: #78BC5B;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+
+.favBar {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid lightgrey;
 }

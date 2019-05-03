@@ -28,7 +28,7 @@ class Favorite extends Component {
 
   render() {
     favoriteEl = this.props.favoriteFoods.map((food) => {
-      return <div><p>{food.label}</p><img src={food.img_url} /><button onClick={(e) => this.props.removeFavFood(food.id)}>Remove</button></div>
+      return <div className="favBar"><p>{food.label}</p><img src={food.img_url} /><button className="removeBtn" onClick={(e) => this.props.removeFavFood(food.id)}>Remove</button></div>
     });
     return(
       <div>
