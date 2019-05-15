@@ -1,18 +1,18 @@
 import * as types from '../constants/actionTypes';
 
 
-// const initialState = {
-//   usernameStr: '',
-//   passwordStr: '',
-//   isLoggedIn: false,
-//   isSignup: false,
-//   userId : null,
-//   userName: '',
-//   email: '',
-//   error: null
-// }
+const initialState = {
+  usernameStr: '',
+  passwordStr: '',
+  isLoggedIn: false,
+  isSignup: false,
+  userId: null,
+  userName: '',
+  email: '',
+  error: null
+}
 
-const authReducer = (state = null, action) => {
+const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.UPDATE_USERNAME_STR:
       return {

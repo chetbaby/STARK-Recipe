@@ -1,19 +1,19 @@
 import * as types from "../constants/actionTypes";
 
-//  const initialState = {
-//    searchStr: "",
-//    searchResults: [],
-//    cart: [],
-//    currCard: [],
-//    hasBeenClicked: false,
-//    cardClicked: false,
-//    backButton: true,
-//    cardId: -1,
-//    favoriteFoods: [],
-//    shoppingCartArr: []
-//  }
+const initialState = {
+  searchStr: "",
+  searchResults: [],
+  cart: [],
+  currCard: [],
+  hasBeenClicked: false,
+  cardClicked: false,
+  backButton: true,
+  cardId: -1,
+  favoriteFoods: [],
+  shoppingCartArr: []
+}
 
-const mainReducer = (state = null, action) => {
+const mainReducer = (state = initialState, action) => {
   let searchResults;
   let cardClicked;
   switch (action.type) {

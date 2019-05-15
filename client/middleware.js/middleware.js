@@ -10,7 +10,7 @@ export default function createLogger({ getState }) {
                 .add({
                     ...prevState
                 });
-            getTable(db);
+            // getTable(db);
             next(action);
         };
 };
