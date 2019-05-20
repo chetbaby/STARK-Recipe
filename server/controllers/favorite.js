@@ -16,7 +16,6 @@ const favorite = (req, res, next) => {
       res.locals.err = err;
       return next();
     }
-    console.log(results);
     res.locals.data = results.rows;
     return next();
   })

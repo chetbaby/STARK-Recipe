@@ -1,10 +1,10 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #f6f6f6;
   margin: 0;
   padding: 0;
-  
-  background: linear-gradient(rgba(200,200,200,.3), rgba(200,200,200,.3)), url('food5.jpg');
+
+  background: linear-gradient(rgba(200,200,200,.3), rgba(200,200,200,.3)), url('img/food5.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -20,39 +20,41 @@ body {
   width: 100%;
 }
 
-#mainContainer {
-  margin: 0;
-  background: #fff;
-}
-
 #searchheader {
-  background-color: #252e38;
+  background: linear-gradient(to bottom, #febd4d 0%, #ffcc99 100%);
   padding: 0;
-  border-bottom: 1px solid;
-  /* position: fixed; */
-  /* box-shadow: 0px 0px 40px #ddd;
+  position: fixed;
   color: #fff;
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  margin-top: 70px;
+  -webkit-box-shadow: 4px 10px 8px -1px rgba(115,115,115,0.68);
+  -moz-box-shadow: 4px 10px 8px -1px rgba(115,115,115,0.68);
+  box-shadow: 4px 10px 8px -1px rgba(115,115,115,0.68);
 }
 
-#logo {
-  color: #f2bb10;
-  width: 120px;
-  font-weight: bold;
-  margin: 15px 20px;
-  font-size: 18px;
+.headerName {
+  position: fixed;
+  background-color: #febd4d;
+  height: 100px;
+  display: flex;
+  width: 100%;
+  color: white;
+}
+
+.welcomeHeader {
+  margin-left: 20px;
+  font-family: 'Oswald', sans-serif;
 }
 
 #searchbox {
-  margin-left: 50px;
   margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 50px;
-  width: 1200px;
+  margin-bottom: 15px;
+  margin-right: 150px;
+  width: 70%;
   position: relative;
   display: flex;
   align-items: center;
@@ -61,41 +63,50 @@ body {
 #searchbar {
   width: 100%;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 30px;
   padding-left: 10px;
+  outline: none;
+  border: none;
+  margin-left: 40px;
 }
 
 #searchBtn {
-  width: 50px;
+  width: 120px;
   height: 40px;
-  margin-left: 5px;
-  border-radius: 5px;
+  margin-left: 10px;
+  border-radius: 20px;
   outline: none;
   border: 0;
   background-color: #fefefe;
 }
 
-#login {
-  height: 40px;
-  outline: none;
-  border: 0;
-  margin-left: 150px;
-  border-radius: 5px;
-  background-color: #f2bb10;
+.rightLogo {
+  padding: 5px;
+  margin: 0;
+  float: right;
+  padding: 5px 30px;
 }
 
 #rightMenuContainer {
   float: right;
   width: 19%;
   height: 760px;
-  border: 1px dotted grey;
+  /* border: 1px dotted grey; */
   display: flex;
   float: right;
   flex-direction: column;
+  text-align: center;
+  overflow-y: scroll;
 }
 
 .ingredients p {
   font-size: 15px;
+  line-height: 0.5;
+}
+
+.nutrition p {
+  font-size: 15px;
+  line-height: 0.6;
 }
 
 .rightMenuBox {
@@ -103,48 +114,46 @@ body {
   height: 380px;
 }
 .rightMenuBtn {
-  /* display: flex; */
-  background-color: #f2bb10;
+  background-color: white;
   cursor: pointer;
-  padding: 18px;
   outline: none;
-  font-size: 15px;
+  font-size: 22px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   display: table-cell;
   vertical-align: middle;
+  margin-top: 140px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
 }
 
 .row {
   margin-left: 2.5%;
   width: 75%;
-  height: auto;
+  height: 75%;
+  position: absolute;
   display: inline-block;
   text-align: center;
+  margin-top: 170px;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
 }
 
-.card {
-  text-align: center;
-  background-color: rgb(206, 190, 190);
-  width: 21%;
-  margin: 12px;
-  /* border: dotted 1px rgb(71, 70, 70); */
-  display: inline-block;
-}
-.card img {
-  width: 66%;
-  height: 50%;
-  padding-top: 25px
-}
 
 #searchbar {
   width: 100%;
 }
 
 #mainbody {
-  margin: 20px;
+  margin: 20px 50px;
   width: 80%;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  overflow-y: scroll;
 }
 
 #descriptionContainer {
@@ -166,19 +175,6 @@ body {
   display: inline-block;
 }
 
-.loginBackground {
-  /* background: linear-gradient(rgba(200,200,200,.3), rgba(200,200,200,.3)), url('food5.jpg'); */
-  background-color: red;
-  background-size: contain;
-  background-attachment: fixed;
-  background-size: 100vw 100vh;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-
-
-
 .loginSignup {
   background-color: white;
   width: 300px;
@@ -190,7 +186,7 @@ body {
   position: absolute;
   margin-top: -200px;
   margin-left: -150px;
-  border-radius: 5px;
+  border-radius: 10px;
 
   -webkit-box-shadow: 4px 10px 8px -1px rgba(115,115,115,0.68);
   -moz-box-shadow: 4px 10px 8px -1px rgba(115,115,115,0.68);
@@ -198,11 +194,11 @@ body {
 }
 
 .loginSignupHeader {
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   font-family: 'Roboto', sans-serif;
   color: #252e38;
   font-size: 34px;
   margin-top: 40px;
+  font-weight: bold;
 }
 
 .textbox {
@@ -215,7 +211,7 @@ body {
 
 .loginSignupInput {
   background-color: white;
-  background-image: url('user-logo.png');
+  background-image: url('img/user-logo.png');
   background-size: 28px;
   background-repeat: no-repeat;
 
@@ -223,18 +219,16 @@ body {
   border-right: none;
   border-left: none;
   border-bottom: 1px solid lightgrey;
-  /* border-color: transparent; */
-  
+
   width: 150px;
   height: 20px;
   padding: 5px 30px;
-  /* border-radius: 5px; */
   outline: none;
 }
 
 .passwordInput {
   background-color: white;
-  background-image: url('password-logo.png');
+  background-image: url(./img/password-logo.png);
   background-size: 28px;
   background-repeat: no-repeat;
 
@@ -242,11 +236,10 @@ body {
   border-right: none;
   border-left: none;
   border-bottom: 1px solid lightgrey;
-  
+
   width: 150px;
   height: 20px;
   padding: 5px 30px;
-  /* border-radius: 5px; */
   outline: none;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -269,14 +262,12 @@ body {
   border: none;
 }
 
-#loginButton:hover, #completeSignup:hover {
+#loginButton:hover, #completeSignup:hover, .pageBtn:hover {
   background-color: #9F9F9F;
 }
 
 .member {
   font-size: 12px;
-  /* margin-top: 30px; */
-  /* padding: 0; */
 }
 
 #signUpButton {
@@ -290,3 +281,58 @@ body {
   cursor: pointer;
 }
 
+.pageBtn {
+  width: 20%;
+  height: 30px;
+  margin-bottom: 30px;
+  border-radius: 30px;
+  outline: none;
+  background-color: #78BC5B;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+
+.removeBtn {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  outline: none;
+  background-color: #78BC5B;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+
+.favBar {
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+
+.card {
+  text-align: center;
+  /* background-color: rgb(206, 190, 190); */
+  width: 21%;
+  margin: 12px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 66%;
+  height: 50%;
+  padding-top: 25px
+}
+
+.card :hover{
+  transition-duration: 1s;
+  border-radius: 20px;
+  box-shadow: 10px 10px 22px -4px rgba(0,0,0,0.75);
+}
+
+.cardButton * {
+  pointer-events: none
+}

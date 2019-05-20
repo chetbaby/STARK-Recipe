@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom'
 import * as authActions from '../actions/authActions'
-
+require ('./signup.css')
 
 const mapStateToProps = (store) => ({
   usernameStr:store.auth.usernameStr,
@@ -21,6 +21,11 @@ class SignupPage extends React.Component{
   constructor(props){
     super(props);
   }
+  
+  // componentDidMount () {
+  //   document.body.style.backgroundImage = "url('./img/food6.jpg')";
+  // }
+
   render(){
     if (this.props.isLoggedIn === true) {
       return <Redirect to="/maincontainer"></Redirect>

@@ -48,11 +48,27 @@ const mainReducer = (state = initialState, action) => {
         ...state,
         favoriteFoods: action.payload
       }
-    case types.CHANGE_HAS_BEEN_CLICKED:
-    case types.CHANGE_FAVORITE_FOODS:
-    case types.CONNECT_TO_RECIPE:
-    case types.GET_SHOPPING_LIST:
-    case types.ADD_TO_SHOPPING_CART:
+
+     case types.CHANGE_HAS_BEEN_CLICKED:
+     case types.CHANGE_FAVORITE_FOODS:
+     case types.CONNECT_TO_RECIPE:
+     case types.GET_SHOPPING_LIST:
+
+     case types.REMOVE_FAV:
+       let newFavs = state.favoriteFoods.slice(0);
+       for(let i = 0; i < newFavs.length; i++) {
+         if(newFavs[i].id === action.payload.favId) {
+           newFavs.splice(i, 1);
+           break;
+         }
+       }
+       return {
+         ...state,
+         favoriteFoods: newFavs
+       }
+
+     case types.ADD_TO_SHOPPING_CART:
+
       return {
         ...state,
         shoppingCartArr: state.shoppingCartArr.concat(action.payload)

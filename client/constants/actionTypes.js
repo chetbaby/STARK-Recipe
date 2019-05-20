@@ -22,3 +22,4 @@ export const GET_SHOPPING_LIST = "GET_SHOPPING_LIST"; //changes list obj in line
 export const ON_CARD_CLICKED = "ON_CARD_CLICKED";
 export const BACK_BUTTON_CLICKED = "BACK_BUTTON_CLICKED";
 export const ADD_TO_SHOPPING_CART = "ADD_TO_SHOPPING_CART";
+export const REMOVE_FAV = "REMOVE_FAV";

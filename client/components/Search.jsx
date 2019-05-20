@@ -4,7 +4,7 @@ import React from "react";
 const Search = props => {
   return (
     <div id="searchheader">
-      <div id="logo">Stark Recipe Finder</div>
+      {/* <div id="logo">Blissey Recipe Finder</div> */}
       <div id="searchbox">
         <input
           type="text"
@@ -18,6 +18,12 @@ const Search = props => {
           {" "}
           Search{" "}
         </button>
+      </div>
+   
+      <div className="rightLogo">
+        <img src="https://img.icons8.com/ios-glyphs/42/FFFFFF/user.png"/>
+        <img src="https://img.icons8.com/material-sharp/42/FFFFFF/smiling-face-with-heart.png"/>
+        <img src="https://img.icons8.com/ios/42/FFFFFF/bell-filled.png"></img>
       </div>
     </div>
   );

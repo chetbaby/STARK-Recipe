@@ -12,7 +12,8 @@ const mapStateToProps = (store) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchFavoriteFoods: (userId) => {dispatch(mainActions.fetchFavoriteFoods(userId))}
+  fetchFavoriteFoods: (userId) => dispatch(mainActions.fetchFavoriteFoods(userId)),
+  removeFavFood: (favId) => dispatch(mainActions.removeFavFoodPost(favId))
 });
 
 
@@ -27,7 +28,7 @@ class Favorite extends Component {
 
   render() {
     favoriteEl = this.props.favoriteFoods.map((food) => {
-      return <div><p>test123</p><img src={food.img_url} /></div>
+      return <div className="favBar"><p>{food.label}</p><img src={food.img_url} /><button className="removeBtn" onClick={(e) => this.props.removeFavFood(food.id)}>Remove</button></div>
     });
     return(
       <div>

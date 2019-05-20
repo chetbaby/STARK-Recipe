@@ -1,0 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background: linear-gradient(rgba(200,200,200,.3), rgba(200,200,200,.3)), url('./../img/food6.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    object-fit: contain;
+}
